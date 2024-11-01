@@ -1,42 +1,45 @@
 /*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
     Created on : 12 Sept 2024, 23:51:42
     Author     : ASUS
 */
-*
-*{
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 15px;
-    line-height: 18px;
-    font-family: 'Poppíns', sans-serif;
+    line-height: 1.5; /* Thay đổi line-height để dễ đọc hơn */
+    font-family: 'Poppins', sans-serif; /* Sửa lỗi đánh máy */
     scroll-behavior: smooth; /* Thêm hiệu ứng cuộn mượt mà cho toàn bộ trang */
 }
 
-a{
+a {
     text-decoration: none;
     color: #888;
+    transition: color 0.3s; /* Thêm hiệu ứng chuyển màu khi di chuột */
 }
 
-.container{
+a:hover {
+    color: #0033FF; /* Thay đổi màu khi hover lên link */
+}
+
+.container {
     display: grid;
     grid-template-columns: 15% 85%;
     height: auto; /* Đảm bảo chiều cao là tự động */
 }
+
 .container_right {
-    height: 100vh; /* Hoặc một giá trị chiều cao cụ thể nếu cần */
+    height: auto; /* Đảm bảo chiều cao tự động cho phần bên phải */
+    padding: 20px; /* Thêm khoảng cách xung quanh nội dung */
 }
 
-.nav_menu{
+.nav_menu {
     width: 15%;
-    background-color: #444;
+    background-color: #222;
     height: 100vh;
     color: white;
     position: fixed;
@@ -44,53 +47,57 @@ a{
     left: 0;
     text-align: center;
     padding-top: 20px;
+    
 }
 
-.nav_menu img{
+.nav_menu img {
     width: 10em;
     height: 10em;
-    border: 4px solid #444;
+    border: 4px solid #222;
     border-radius: 50%;
+    margin-bottom: 20px; /* Thêm khoảng cách dưới ảnh */
 }
 
-.icon i{
-    padding : 5px;
+.icon i {
+    padding: 5px;
     border-radius: 50%;
     background-color: #0033FF;
     margin: 10px 0px;
     color: white;
-    font-size:20px;
+    font-size: 20px;
+    transition: background-color 0.3s; /* Thêm hiệu ứng chuyển màu */
 }
 
-.nav_menu li{
+.nav_menu li {
     list-style-type: none;
     width: 100%;
     text-align: left;
-    padding : 15px 20px;
+    padding: 15px 20px;
     font-size: 20px;
+    transition: background-color 0.3s; /* Thêm hiệu ứng chuyển màu nền */
 }
 
-#active i{
+#active i {
     color: aqua;
 }
 
-#active span{
+#active span {
     color: white;
 }
 
-.nav_menu li a:hover i{
-        color: aqua;
+.nav_menu li a:hover i {
+    color: aqua;
 }
 
-.nav_menu li a:hover span{
-        color: white;
+.nav_menu li a:hover span {
+    color: white;
 }
 
-.title{
+.title {
     padding-left: 15px; 
 }
 
-.title h3{
+.title h3 {
     font-size: 30px;
     color: orange;
     position: relative;
@@ -98,23 +105,23 @@ a{
 }
 
 body {
-  background-image: url('../images/background2.png'); /* Đường dẫn đến hình nền */
-  background-size: cover; /* Đảm bảo hình nền bao phủ toàn bộ trang */
-  background-position: center; /* Căn giữa hình nền */
-  background-repeat: no-repeat; /* Ngăn việc lặp lại hình nền */
-  background-attachment: fixed;/* Giữ hình nền cố định khi cuộn */
+    background-image: url('../images/background2.jpg'); /* Đường dẫn đến hình nền */
+    background-size: cover; /* Đảm bảo hình nền bao phủ toàn bộ trang */
+    background-position: center; /* Căn giữa hình nền */
+    background-repeat: no-repeat; /* Ngăn việc lặp lại hình nền */
+    background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
 }
 
-.title h3::after{
+.title h3::after {
     content: "";
     width: 50px;
     border: 2px solid greenyellow;
     position: absolute;
-    top: 45px;
+    top: 60px;
     left: 0px;
 }
 
-.about_student{
+.about_student {
     display: grid;
     grid-template-columns: 30% 65%;
     column-gap: 5%;
@@ -122,90 +129,96 @@ body {
     margin: 20px 0px;
 }
 
-.about_student img{
+.about_student img {
     width: 100%;
 }
-.content_about_student h4{
-    color: orange; 
+
+.content_about_student h4 {
+    color: #000; 
 }
 
-.content_title{
-    font-size: 23px;
+.content_title {
+    font-size:30px;
     padding: 15px 0px; 
     margin-left: 20%;
 }   
 
-.par_italic{
+.par_italic {
     font-style: italic; 
 }
 
-.about_student ul{
+.about_student ul {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     list-style: none;
     row-gap: 20px;
 }
 
-.about_student ul i{
+.about_student ul i {
     color: blue;
 }
 
-.about_student ul span{
-    font-size: 16px;
-
+.about_student ul span {
+    font-size: 20px;
     font-weight: bold;
 }
 
-.about_student ul p{
-    margin-left: 0; /* Hoặc giá trị cụ thể bạn muốn */
-    padding-left: 18px; /* Đặt giá trị phù hợp */
-    font-size: 14px;
+.about_student ul p {
+    margin-left: 0; 
+    padding-left: 18px; 
+    font-size: 16px;
 }
 
-
-.fact_content{
+.fact_content {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 10%;
     margin-top: 30px;
     margin-left: 10px;
     margin-bottom: 20px;
-    height: 100vh;
+    height: auto; /* Đảm bảo chiều cao tự động */
 }
-.box
-{
+
+.box {
     display: grid;
     grid-template-columns: 25% 70%;
     column-gap: 5%;
-
 }
 
-.box i{
+.box i {
     color: red;
-    font-size: 60px
+    font-size: 60px;
 }
- .box a:hover i{
+
+.box a:hover i {
     color: black;
     font-size: 70px;
 }
 
-.box_content h2{
-    padding-top: 8px;
-    margin-bottom: 20px;
-    font-size: 40px;
-}
-
-.box_content span{
+.box_content h2 {
+    margin-bottom: -5px;
     font-size: 30px;
 }
-.contact{
+
+.box_content span {
+    font-size: 16px;
+    margin-top: 0; /* Đặt giá trị margin-top về 0 để xóa khoảng cách */
+}
+
+.contact {
     display: flex;
     justify-content: center; /* Căn giữa theo chiều ngang */
     align-items: center; /* Căn giữa theo chiều dọc */
     gap: 100px; /* Khoảng cách giữa các biểu tượng */
     height: 100vh;
 }
-.contact i{
+
+.contact i {
     font-size: 100px;
-    color:blue;
+    color: blue;
+    transition: color 0.3s; /* Thêm hiệu ứng chuyển màu cho biểu tượng */
+}
+
+.contact i:hover {
+    color: orange; /* Thay đổi màu khi hover lên biểu tượng */
 }
