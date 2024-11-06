@@ -222,3 +222,25 @@ body {
 .contact i:hover {
     color: orange; /* Thay đổi màu khi hover lên biểu tượng */
 }
+.phone-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.phone-number {
+    display: none;
+    position: absolute;
+    top: 100%; /* Hiển thị dưới biểu tượng điện thoại */
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.phone-icon:hover .phone-number {
+    display: inline-block;
+}
