@@ -210,37 +210,22 @@ body {
     justify-content: center; /* Căn giữa theo chiều ngang */
     align-items: center; /* Căn giữa theo chiều dọc */
     gap: 100px; /* Khoảng cách giữa các biểu tượng */
-    height: 100vh;
+    height: 60vh;
 }
 
 .contact i {
     font-size: 100px;
     color: blue;
-    transition: color 0.3s; /* Thêm hiệu ứng chuyển màu cho biểu tượng */
+    transition: color 0.3s; /* Thêm hiệu ứng chuyển màu cho biểu tượng */  
 }
 
 .contact i:hover {
     color: orange; /* Thay đổi màu khi hover lên biểu tượng */
 }
-.phone-icon {
-    position: relative;
-    display: inline-block;
+.content-hobby{
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
-
-.phone-number {
-    display: none;
-    position: absolute;
-    top: 100%; /* Hiển thị dưới biểu tượng điện thoại */
-    left: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    white-space: nowrap;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.phone-icon:hover .phone-number {
-    display: inline-block;
+.hobby:nth-child(n+2) {
+    padding-top: 50px;
 }
